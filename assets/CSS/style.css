@@ -11,15 +11,17 @@
 
 .light-theme {
   --page-background: linear-gradient(180deg,
-          #ffffff 0%,
-          #ffffff 65%,
-          rgba(255, 255, 255, 0.75) 100%);
+  #ffffff 0%,
+  #ffffff 65%,
+  rgba(255, 255, 255, 0.75) 100%);
+  
   --header-background-color: #e3e3e3;
   --highlight-color: #000000;
   --featured-font-family: 'Archivo', sans-serif;
   --character-top-image-src: url("../imagens/characters/kids-on-the-bike.svg");
   --character-top-image-color: #ffffff;
   --character-bottom-image-src: url("../imagens/characters/inverted-world-monster.svg");
+  
   --character-bottom-image-color: #e5e5e5;
   --background-lamp-image: url("../imagens/backgrounds/lamps.png");
   --footer-background-color: #b5bbbf;
@@ -27,9 +29,10 @@
 
 .dark-theme {
   --page-background: linear-gradient(180deg,
-      #050000 0%,
-      #130404 65%,
-      rgba(19, 1, 1, 0.75) 100%);
+  #050000 0%,
+  #130404 65%,
+  rgba(19, 1, 1, 0.75) 100%);
+  
   --header-background-color: #220f0f;
   --highlight-color: #ffffff;
   --featured-font-family: 'Rubik Glitch', sans-serif;
@@ -56,10 +59,9 @@
   
 
 * {
-
   margin: 0;
   box-sizing: border-box;
-  transition: 1s;
+  transition: 1s; 
 }
 
 h1,
@@ -108,7 +110,7 @@ main::before {
   height: 100%;
   position: absolute;
   background: var(--page-background) no-repeat,
-    url("../imagens/backgrounds/florest.png") no-repeat;
+  url("../imagens/backgrounds/florest.png") no-repeat;
   background-size: cover;
   z-index: -1;
 }
@@ -190,9 +192,10 @@ header::before {
 .world-characters#top-characters{
   height: 100%;
   background-color: var(--character-top-image-color);
-  
-  mask: var(--character-top-image-src) bottom / contain no-repeat;
-  -webkit-mask: var(--character-top-image-src) bottom / contain no-repeat;
+  bottom: -3px;
+
+  mask: var(--character-top-image-src) bottom / 100% no-repeat;
+  -webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
 }
 
 .world-characters#bottom-characters{
@@ -231,11 +234,15 @@ section {
 }
 
 #section-inverted-world .section-texts {
-  width: 50%;
+  width: 700%;
+  margin: 150px;
+  padding-right: 170px; 
+  
 }
 
 #section-inverted-world .section-texts h2{
-  max-width: 300px;
+  max-width: 400px;
+  
 }
 
 #section-stranger-things-trailer .section-texts {
